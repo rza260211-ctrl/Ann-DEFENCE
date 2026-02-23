@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&family=Press+Start+2P&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-game: "Press Start 2P", system-ui;
+}
+
+body {
+  @apply bg-zinc-950 text-zinc-100 overflow-hidden;
+  font-family: var(--font-sans);
+}
+
+.game-container {
+  @apply relative w-full h-screen flex flex-col items-center justify-center bg-gradient-to-b from-sky-900 via-blue-900 to-indigo-950;
+}
+
+canvas {
+  @apply cursor-crosshair touch-none;
+}
+
+.hud-text {
+  font-family: var(--font-game);
+  @apply text-[10px] sm:text-xs;
+}
